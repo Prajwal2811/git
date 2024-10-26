@@ -1,0 +1,754 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>GoWash - Dry Cleaning & Laundry Service</title>
+	<link rel="icon" href="http://localhost:8000/admin/images/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="http://localhost:8000/admin/images/favicon.png" type="image/x-icon">
+	<link href="./asset/css/bootstrap.min.css" rel="stylesheet">
+	<link href="./asset/css/animation.css" rel="stylesheet">
+	<link href="./asset/css/dropzone.min.css" rel="stylesheet">
+	<link href="./asset/css/flatpickr.min.css" rel="stylesheet">
+	<link href="./asset/css/flickity.min.css" rel="stylesheet">
+	<link href="./asset/css/lightbox.min.css" rel="stylesheet">
+	<link href="./asset/css/magnifypopup.css" rel="stylesheet">
+	<link href="./asset/css/select2.min.css" rel="stylesheet">
+	<link href="./asset/css/rangeSlider.min.css" rel="stylesheet">
+	<link href="./asset/css/prism.css" rel="stylesheet">
+	<link href="./asset/css/bootstrap-icons.css" rel="stylesheet">
+	<link href="./asset/css/fontawesome.css" rel="stylesheet">
+	<link href="./asset/css/style.css" rel="stylesheet">
+</head>
+<body>
+			<div class="col-xl-12 col-lg-12 col-12" style="height: 3rem;">
+			<div class="card">
+				<div class="row g-0 align-items-center justify-content-between p-2">
+					<div class="col text-center">
+						<p class="mb-0">
+							<i>Welcome, <b>Wasant Gawade</b>. We are the Best Laundry Service.</i>
+						</p>
+					</div>
+					<div class="col-auto">
+						<a href="http://localhost:8000/userLogout" class="btn btn-sm btn-outline-danger">
+							<i class="fa-solid fa-right-from-bracket"></i>&nbsp; Log Out
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+  
+<style>
+	.header.header-transparent {
+		top: 6%;
+	}
+</style>
+
+
+	<div id="preloader">
+		<div class="preloader"><span></span><span></span></div>
+	</div>
+	<div id="main-wrapper">
+		<div class="header header-transparent theme">
+			<div class="container">
+				<nav id="navigation" class="navigation navigation-landscape">
+					<div class="nav-header">
+						<a class="nav-brand static-show" href="#"><img
+								src="./asset/img/gowash-high-resolution-logo-transparent.png" class="logo"
+								alt=""></a>
+						<a class="nav-brand mob-show" href="#"><img
+								src="./asset/img/gowash-high-resolution-logo-transparent.png" class="logo"
+								alt=""></a>
+						<div class="nav-toggle"></div>
+						
+						<div class="mobile_nav">
+							<ul>
+								<li class="currencyDropdown me-2">
+									<a href="#" class="nav-link" data-bs-toggle="modal"
+										data-bs-target="#currencyModal"><span class="fw-medium">INR</span></a>
+								</li>
+								<li class="languageDropdown me-2">
+									<a href="#" class="nav-link" data-bs-toggle="modal"
+										data-bs-target="#countryModal"><img src="./asset/img/flag/flag.png"
+											class="img-fluid" width="17" alt="Country"></a>
+								</li>
+								<li>
+									<a href="#" class="bg-light-primary text-primary rounded" data-bs-toggle="modal"
+										data-bs-target="#login"><i class="fa-regular fa-circle-user fs-6"></i></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="nav-menus-wrapper" style="transition-property: none;">
+						<ul class="nav-menu">
+							<li>
+								<a href="./my-profile.html">Home<span class="submenu-indicator"></span></a>
+							</li>
+
+							<li>
+								<a href="/about-us.html">About Us<span class="submenu-indicator"></span></a>
+							</li>
+
+							<li>
+								<a href="/pricing-list.html">Pricing<span class="submenu-indicator"></span></a>
+							</li>
+							<li>
+								<a href="/contact-us.html">Contact Us<span class="submenu-indicator"></span></a>
+							</li>
+						</ul>
+							<ul class="nav-menu nav-menu-social align-to-right">
+								<li class="currencyDropdown me-2">
+									<a href="#" class="nav-link" data-bs-toggle="modal"
+										data-bs-target="#currencyModal"><span class="fw-medium">INR</span></a>
+								</li>
+								<li class="languageDropdown me-2">
+									<a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#countryModal"><img
+											src="./asset/img/flag/flag.png" class="img-fluid" width="17"
+											alt="Country"></a>
+								</li>
+																	<li class="list-buttons">
+										<a href="http://localhost:8000/my-profile" ><i class="fa-regular fa-circle-user fs-6 me-2"></i>Wasant</a>
+									</li>
+								
+							</ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+
+
+
+		<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="loginmodal" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered login-pop-form" role="document">
+				<div class="modal-content" id="loginmodal">
+											<div class="modal-header">
+							<h4 class="modal-title fs-6">WasantGawade</h4>
+							<a href="#" class="text-muted fs-4" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-square-xmark"></i></a>
+						</div>
+					
+					<div class="modal-body">
+						<div class="modal-login-form px-md-3 px-0">
+							<form class="text-start" action="http://localhost:8000/userloginsubmit" method="post" enctype="multipart/form-data">
+							<input type="hidden" name="_token" value="RMMIVII8LRblaygFZTEMj8XlRVaxYfJnqcRMQUKq">								<div class="form py-4">
+									<div class="form-floating mb-4">
+										<input type="email" name="email" class="form-control" placeholder="name@example.com" value="" >
+										<label>Email Id </label>
+										<span class="text-danger">
+																					</span>
+									</div>
+									<div class="form-floating mb-4">
+										<input type="text" class="form-control" id="password-field" name="password" placeholder="Password" value="">
+										<label>Password </label>
+										<span class="toggle-password position-absolute top-50 end-0 translate-middle-y me-3 fa-regular fa-eye fa-eye-slash"></span>
+										<span class="text-danger">
+																					</span>
+									</div>
+									<div class="form-group">
+										<button type="submit" class="btn btn-primary full-width font--bold btn-lg">Log In</button>
+									</div>
+
+									Or
+
+									<div class="form-group">
+										<a href="http://localhost:8000/google/redirect" class="btn btn-primary"> Login with Google </a>	
+									</div>
+
+									
+
+									<div class="modal-flex-item d-flex align-items-center justify-content-between mb-3">
+										<div class="modal-flex-first">
+											<div class="form-check form-check-inline">
+												<input class="form-check-input" type="checkbox" id="savepassword" value="option1">
+												<label class="form-check-label" for="savepassword">Save Password</label>
+											</div>
+										</div>
+										<div class="modal-flex-last">
+											<a href="JavaScript:Void(0);" class="text-primary fw-medium">Forget Password?</a>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="modal-footer align-items-center justify-content-center">
+						<p>Don't have an account yet?<a target="_blank" href="http://localhost:8000/sign-up" class="text-primary fw-medium ms-1">Sign Up</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal modal-lg fade" id="currencyModal" tabindex="-1" aria-labelledby="currenyModalLabel"
+			aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title fs-6" id="currenyModalLabel">Select Your Currency</h4>
+						<a href="#" class="text-muted fs-4" data-bs-dismiss="modal" aria-label="Close"><i
+								class="fa-solid fa-square-xmark"></i></a>
+					</div>
+					<div class="modal-body">
+						<div class="allCurrencylist">
+
+							<div class="suggestedCurrencylist-wrap mb-4">
+								<div class="d-inline-block mb-0 ps-3">
+									<h5 class="fs-6 fw-bold">Suggested Currency For you</h5>
+								</div>
+								<div class="suggestedCurrencylists">
+									<ul
+										class="row align-items-center justify-content-start row-cols-xl-4 row-cols-lg-3 row-cols-md-2 row-cols-2 gy-2 gx-3 m-0 p-0">
+										<li class="col">
+											<a class="selectCurrency" href="#">
+												<div class="text-dark text-md fw-medium">United State Dollar</div>
+												<div class="text-muted-2 text-md text-uppercase">USD</div>
+											</a>
+										</li>
+										<li class="col">
+											<a class="selectCurrency" href="#">
+												<div class="text-dark text-md fw-medium">Pound Sterling</div>
+												<div class="text-muted-2 text-md text-uppercase">GBP</div>
+											</a>
+										</li>
+										<li class="col">
+											<a class="selectCurrency active" href="#">
+												<div class="text-dark text-md fw-medium">Indian Rupees</div>
+												<div class="text-muted-2 text-md text-uppercase">Inr</div>
+											</a>
+										</li>
+										<li class="col">
+											<a class="selectCurrency" href="#">
+												<div class="text-dark text-md fw-medium">Euro</div>
+												<div class="text-muted-2 text-md text-uppercase">EUR</div>
+											</a>
+										</li>
+										<li class="col">
+											<a class="selectCurrency" href="#">
+												<div class="text-dark text-md fw-medium">Australian Dollar</div>
+												<div class="text-muted-2 text-md text-uppercase">aud</div>
+											</a>
+										</li>
+										<li class="col">
+											<a class="selectCurrency" href="#">
+												<div class="text-dark text-md fw-medium">Thai Baht</div>
+												<div class="text-muted-2 text-md text-uppercase">thb</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+							<div class="suggestedCurrencylist-wrap">
+								<div class="d-inline-block mb-0 ps-3">
+									<h5 class="fs-6 fw-bold">All Currencies</h5>
+								</div>
+								<div class="suggestedCurrencylists">
+									<ul
+										class="row align-items-center justify-content-start row-cols-xl-4 row-cols-lg-3 row-cols-md-2 row-cols-2 gy-2 gx-3 m-0 p-0">
+										<li class="col">
+											<a class="selectCurrency" href="#">
+												<div class="text-dark text-md fw-medium">United State Dollar</div>
+												<div class="text-muted-2 text-md text-uppercase">USD</div>
+											</a>
+										</li>
+										<li class="col">
+											<a class="selectCurrency" href="#">
+												<div class="text-dark text-md fw-medium">Property currency</div>
+												<div class="text-muted-2 text-md text-uppercase">GBP</div>
+											</a>
+										</li>
+										<li class="col">
+											<a class="selectCurrency" href="#">
+												<div class="text-dark text-md fw-medium">Argentine Peso</div>
+												<div class="text-muted-2 text-md text-uppercase">EUR</div>
+											</a>
+										</li>
+										<li class="col">
+											<a class="selectCurrency" href="#">
+												<div class="text-dark text-md fw-medium">Azerbaijani Manat</div>
+												<div class="text-muted-2 text-md text-uppercase">Inr</div>
+											</a>
+										</li>
+										<li class="col">
+											<a class="selectCurrency" href="#">
+												<div class="text-dark text-md fw-medium">Australian Dollar</div>
+												<div class="text-muted-2 text-md text-uppercase">aud</div>
+											</a>
+										</li>
+										<li class="col">
+											<a class="selectCurrency" href="#">
+												<div class="text-dark text-md fw-medium">Bahraini Dinar</div>
+												<div class="text-muted-2 text-md text-uppercase">thb</div>
+											</a>
+										</li>
+										<li class="col">
+											<a class="selectCurrency" href="#">
+												<div class="text-dark text-md fw-medium">Brazilian Real</div>
+												<div class="text-muted-2 text-md text-uppercase">USD</div>
+											</a>
+										</li>
+										<li class="col">
+											<a class="selectCurrency" href="#">
+												<div class="text-dark text-md fw-medium">Bulgarian Lev</div>
+												<div class="text-muted-2 text-md text-uppercase">GBP</div>
+											</a>
+										</li>
+										<li class="col">
+											<a class="selectCurrency" href="#">
+												<div class="text-dark text-md fw-medium">Canadian Dollar</div>
+												<div class="text-muted-2 text-md text-uppercase">EUR</div>
+											</a>
+										</li>
+										<li class="col">
+											<a class="selectCurrency" href="#">
+												<div class="text-dark text-md fw-medium">Chilean Peso</div>
+												<div class="text-muted-2 text-md text-uppercase">Inr</div>
+											</a>
+										</li>
+										<li class="col">
+											<a class="selectCurrency" href="#">
+												<div class="text-dark text-md fw-medium">Colombian Peso</div>
+												<div class="text-muted-2 text-md text-uppercase">aud</div>
+											</a>
+										</li>
+										<li class="col">
+											<a class="selectCurrency" href="#">
+												<div class="text-dark text-md fw-medium">Danish Krone</div>
+												<div class="text-muted-2 text-md text-uppercase">thb</div>
+											</a>
+										</li>
+										<li class="col">
+											<a class="selectCurrency" href="#">
+												<div class="text-dark text-md fw-medium">Egyptian Pound</div>
+												<div class="text-muted-2 text-md text-uppercase">USD</div>
+											</a>
+										</li>
+										<li class="col">
+											<a class="selectCurrency" href="#">
+												<div class="text-dark text-md fw-medium">Hungarian Forint</div>
+												<div class="text-muted-2 text-md text-uppercase">GBP</div>
+											</a>
+										</li>
+										<li class="col">
+											<a class="selectCurrency" href="#">
+												<div class="text-dark text-md fw-medium">Japanese Yen</div>
+												<div class="text-muted-2 text-md text-uppercase">EUR</div>
+											</a>
+										</li>
+										<li class="col">
+											<a class="selectCurrency" href="#">
+												<div class="text-dark text-md fw-medium">Jordanian Dinar</div>
+												<div class="text-muted-2 text-md text-uppercase">Inr</div>
+											</a>
+										</li>
+										<li class="col">
+											<a class="selectCurrency" href="#">
+												<div class="text-dark text-md fw-medium">Kuwaiti Dinar</div>
+												<div class="text-muted-2 text-md text-uppercase">aud</div>
+											</a>
+										</li>
+										<li class="col">
+											<a class="selectCurrency" href="#">
+												<div class="text-dark text-md fw-medium">Malaysian Ringgit</div>
+												<div class="text-muted-2 text-md text-uppercase">thb</div>
+											</a>
+										</li>
+										<li class="col">
+											<a class="selectCurrency" href="#">
+												<div class="text-dark text-md fw-medium">Singapore Dollar</div>
+												<div class="text-muted-2 text-md text-uppercase">thb</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<div class="modal modal-lg fade" id="countryModal" tabindex="-1" aria-labelledby="countryModalLabel"
+			aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title fs-6" id="countryModalLabel">Select Your Country</h4>
+						<a href="#" class="text-muted fs-4" data-bs-dismiss="modal" aria-label="Close"><i
+								class="fa-solid fa-square-xmark"></i></a>
+					</div>
+					<div class="modal-body">
+						<div class="allCountrieslist">
+
+							<div class="suggestedCurrencylist-wrap mb-4">
+								<div class="d-inline-block mb-0 ps-3">
+									<h5 class="fs-6 fw-bold">Suggested Countries For you</h5>
+								</div>
+								<div class="suggestedCurrencylists">
+									<ul
+										class="row align-items-center justify-content-start row-cols-xl-4 row-cols-lg-3 row-cols-2 gy-2 gx-3 m-0 p-0">
+										<li class="col">
+											<a class="selectCountry" href="#">
+												<div class="d-inline-block"><img
+														src="./asset/img/flag/united-states.png"
+														class="img-fluid circle" width="35" alt=""></div>
+												<div class="text-dark text-md fw-medium ps-2">United State Dollar</div>
+											</a>
+										</li>
+										<li class="col">
+											<a class="selectCountry" href="#">
+												<div class="d-inline-block"><img
+														src="./asset/img/flag/united-kingdom.png"
+														class="img-fluid circle" width="35" alt=""></div>
+												<div class="text-dark text-md fw-medium ps-2">Pound Sterling</div>
+											</a>
+										</li>
+										<li class="col">
+											<a class="selectCountry active" href="#">
+												<div class="d-inline-block"><img
+														src="./asset/img/flag/flag.png"
+														class="img-fluid circle" width="35" alt=""></div>
+												<div class="text-dark text-md fw-medium ps-2">Indian Rupees</div>
+											</a>
+										</li>
+										<li class="col">
+											<a class="selectCountry" href="#">
+												<div class="d-inline-block"><img
+														src="./asset/img/flag/belgium.png"
+														class="img-fluid circle" width="35" alt=""></div>
+												<div class="text-dark text-md fw-medium ps-2">Euro</div>
+											</a>
+										</li>
+										<li class="col">
+											<a class="selectCountry" href="#">
+												<div class="d-inline-block"><img
+														src="./asset/img/flag/brazil.png"
+														class="img-fluid circle" width="35" alt=""></div>
+												<div class="text-dark text-md fw-medium ps-2">Australian Dollar</div>
+											</a>
+										</li>
+										<li class="col">
+											<a class="selectCountry" href="#">
+												<div class="d-inline-block"><img
+														src="./asset/img/flag/china.png"
+														class="img-fluid circle" width="35" alt=""></div>
+												<div class="text-dark text-md fw-medium ps-2">Thai Baht</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+							<div class="suggestedCurrencylist-wrap">
+								<div class="d-inline-block mb-0 ps-3">
+									<h5 class="fs-6 fw-bold">All Countries</h5>
+								</div>
+								<div class="suggestedCurrencylists">
+									<ul
+										class="row align-items-center justify-content-start row-cols-xl-4 row-cols-lg-3 row-cols-2 gy-2 gx-3 m-0 p-0">
+										<li class="col">
+											<a class="selectCountry" href="#">
+												<div class="d-inline-block"><img
+														src="./asset/img/flag/united-states.png"
+														class="img-fluid circle" width="35" alt=""></div>
+												<div class="text-dark text-md fw-medium ps-2">United State Dollar</div>
+											</a>
+										</li>
+										<li class="col">
+											<a class="selectCountry" href="#">
+												<div class="d-inline-block"><img
+														src="./asset/img/flag/vietnam.png"
+														class="img-fluid circle" width="35" alt=""></div>
+												<div class="text-dark text-md fw-medium ps-2">Property currency</div>
+											</a>
+										</li>
+										<li class="col">
+											<a class="selectCountry" href="#">
+												<div class="d-inline-block"><img
+														src="./asset/img/flag/turkey.png"
+														class="img-fluid circle" width="35" alt=""></div>
+												<div class="text-dark text-md fw-medium ps-2">Argentine Peso</div>
+											</a>
+										</li>
+										<li class="col">
+											<a class="selectCountry" href="#">
+												<div class="d-inline-block"><img
+														src="./asset/img/flag/spain.png"
+														class="img-fluid circle" width="35" alt=""></div>
+												<div class="text-dark text-md fw-medium ps-2">Azerbaijani Manat</div>
+											</a>
+										</li>
+										<li class="col">
+											<a class="selectCountry" href="#">
+												<div class="d-inline-block"><img
+														src="./asset/img/flag/japan.png"
+														class="img-fluid circle" width="35" alt=""></div>
+												<div class="text-dark text-md fw-medium ps-2">Australian Dollar</div>
+											</a>
+										</li>
+										<li class="col">
+											<a class="selectCountry" href="#">
+												<div class="d-inline-block"><img
+														src="./asset/img/flag/flag.png"
+														class="img-fluid circle" width="35" alt=""></div>
+												<div class="text-dark text-md fw-medium ps-2">Bahraini Dinar</div>
+											</a>
+										</li>
+										<li class="col">
+											<a class="selectCountry" href="#">
+												<div class="d-inline-block"><img
+														src="./asset/img/flag/portugal.png"
+														class="img-fluid circle" width="35" alt=""></div>
+												<div class="text-dark text-md fw-medium ps-2">Brazilian Real</div>
+											</a>
+										</li>
+										<li class="col">
+											<a class="selectCountry" href="#">
+												<div class="d-inline-block"><img
+														src="./asset/img/flag/italy.png"
+														class="img-fluid circle" width="35" alt=""></div>
+												<div class="text-dark text-md fw-medium ps-2">Bulgarian Lev</div>
+											</a>
+										</li>
+										<li class="col">
+											<a class="selectCountry" href="#">
+												<div class="d-inline-block"><img
+														src="./asset/img/flag/germany.png"
+														class="img-fluid circle" width="35" alt=""></div>
+												<div class="text-dark text-md fw-medium ps-2">Canadian Dollar</div>
+											</a>
+										</li>
+										<li class="col">
+											<a class="selectCountry" href="#">
+												<div class="d-inline-block"><img
+														src="./asset/img/flag/france.png"
+														class="img-fluid circle" width="35" alt=""></div>
+												<div class="text-dark text-md fw-medium ps-2">Chilean Peso</div>
+											</a>
+										</li>
+										<li class="col">
+											<a class="selectCountry" href="#">
+												<div class="d-inline-block"><img
+														src="./asset/img/flag/european.png"
+														class="img-fluid circle" width="35" alt=""></div>
+												<div class="text-dark text-md fw-medium ps-2">Colombian Peso</div>
+											</a>
+										</li>
+										<li class="col">
+											<a class="selectCountry" href="#">
+												<div class="d-inline-block"><img
+														src="./asset/img/flag/china.png"
+														class="img-fluid circle" width="35" alt=""></div>
+												<div class="text-dark text-md fw-medium ps-2">Danish Krone</div>
+											</a>
+										</li>
+										<li class="col">
+											<a class="selectCountry" href="#">
+												<div class="d-inline-block"><img
+														src="./asset/img/flag/brazil.png"
+														class="img-fluid circle" width="35" alt=""></div>
+												<div class="text-dark text-md fw-medium ps-2">Egyptian Pound</div>
+											</a>
+										</li>
+										<li class="col">
+											<a class="selectCountry" href="#">
+												<div class="d-inline-block"><img
+														src="./asset/img/flag/belgium.png"
+														class="img-fluid circle" width="35" alt=""></div>
+												<div class="text-dark text-md fw-medium ps-2">Hungarian Forint</div>
+											</a>
+										</li>
+										<li class="col">
+											<a class="selectCountry" href="#">
+												<div class="d-inline-block"><img
+														src="./asset/img/flag/turkey.png"
+														class="img-fluid circle" width="35" alt=""></div>
+												<div class="text-dark text-md fw-medium ps-2">Japanese Yen</div>
+											</a>
+										</li>
+										<li class="col">
+											<a class="selectCountry" href="#">
+												<div class="d-inline-block"><img
+														src="./asset/img/flag/spain.png"
+														class="img-fluid circle" width="35" alt=""></div>
+												<div class="text-dark text-md fw-medium ps-2">Jordanian Dinar</div>
+											</a>
+										</li>
+										<li class="col">
+											<a class="selectCountry" href="#">
+												<div class="d-inline-block"><img
+														src="./asset/img/flag/germany.png"
+														class="img-fluid circle" width="35" alt=""></div>
+												<div class="text-dark text-md fw-medium ps-2">Kuwaiti Dinar</div>
+											</a>
+										</li>
+										<li class="col">
+											<a class="selectCountry" href="#">
+												<div class="d-inline-block"><img
+														src="./asset/img/flag/france.png"
+														class="img-fluid circle" width="35" alt=""></div>
+												<div class="text-dark text-md fw-medium ps-2">Malaysian Ringgit</div>
+											</a>
+										</li>
+										<li class="col">
+											<a class="selectCountry" href="#">
+												<div class="d-inline-block"><img
+														src="./asset/img/flag/brazil.png"
+														class="img-fluid circle" width="35" alt=""></div>
+												<div class="text-dark text-md fw-medium ps-2">Singapore Dollar</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="clearfix"></div>
+		<div class="image-cover hero-header bg-white" style="background:url('./asset/img/2.jpg') no-repeat;"
+			data-overlay="5">
+			<div class="container">
+				<div class="row justify-content-center align-items-center">
+					<div class="col-xl-9 col-lg-10 col-md-12 col-sm-12">
+						<div class="position-relative text-center mb-5">
+							<h1>Comming Soon <span
+										class="position-absolute top-50 start-50 translate-middle d-none d-md-block mt-4">
+										<svg width="185px" height="23px" viewBox="0 0 445.5 23">
+											<path class="fill-white opacity-7"
+												d="M409.9,2.6c-9.7-0.6-19.5-1-29.2-1.5c-3.2-0.2-6.4-0.2-9.7-0.3c-7-0.2-14-0.4-20.9-0.5 c-3.9-0.1-7.8-0.2-11.7-0.3c-1.1,0-2.3,0-3.4,0c-2.5,0-5.1,0-7.6,0c-11.5,0-23,0-34.5,0c-2.7,0-5.5,0.1-8.2,0.1 c-6.8,0.1-13.6,0.2-20.3,0.3c-7.7,0.1-15.3,0.1-23,0.3c-12.4,0.3-24.8,0.6-37.1,0.9c-7.2,0.2-14.3,0.3-21.5,0.6 c-12.3,0.5-24.7,1-37,1.5c-6.7,0.3-13.5,0.5-20.2,0.9C112.7,5.3,99.9,6,87.1,6.7C80.3,7.1,73.5,7.4,66.7,8 C54,9.1,41.3,10.1,28.5,11.2c-2.7,0.2-5.5,0.5-8.2,0.7c-5.5,0.5-11,1.2-16.4,1.8c-0.3,0-0.7,0.1-1,0.1c-0.7,0.2-1.2,0.5-1.7,1 C0.4,15.6,0,16.6,0,17.6c0,1,0.4,2,1.1,2.7c0.7,0.7,1.8,1.2,2.7,1.1c6.6-0.7,13.2-1.5,19.8-2.1c6.1-0.5,12.3-1,18.4-1.6 c6.7-0.6,13.4-1.1,20.1-1.7c2.7-0.2,5.4-0.5,8.1-0.7c10.4-0.6,20.9-1.1,31.3-1.7c6.5-0.4,13-0.7,19.5-1.1c2.7-0.1,5.4-0.3,8.1-0.4 c10.3-0.4,20.7-0.8,31-1.2c6.3-0.2,12.5-0.5,18.8-0.7c2.1-0.1,4.2-0.2,6.3-0.2c11.2-0.3,22.3-0.5,33.5-0.8 c6.2-0.1,12.5-0.3,18.7-0.4c2.2-0.1,4.4-0.1,6.7-0.1c11.5-0.1,23-0.2,34.6-0.4c7.2-0.1,14.4-0.1,21.6-0.1c12.2,0,24.5,0.1,36.7,0.1 c2.4,0,4.8,0.1,7.2,0.2c6.8,0.2,13.5,0.4,20.3,0.6c5.1,0.2,10.1,0.3,15.2,0.4c3.6,0.1,7.2,0.4,10.8,0.6c10.6,0.6,21.1,1.2,31.7,1.8 c2.7,0.2,5.4,0.4,8,0.6c2.9,0.2,5.8,0.4,8.6,0.7c0.4,0.1,0.9,0.2,1.3,0.3c1.1,0.2,2.2,0.2,3.2-0.4c0.9-0.5,1.6-1.5,1.9-2.5 c0.6-2.2-0.7-4.5-2.9-5.2c-1.9-0.5-3.9-0.7-5.9-0.9c-1.4-0.1-2.7-0.3-4.1-0.4c-2.6-0.3-5.2-0.4-7.9-0.6 C419.7,3.1,414.8,2.9,409.9,2.6z">
+											</path>
+										</svg>
+									</span></span></h1>
+						</div>
+					</div>
+
+					
+				</div>
+			</div>
+		</div>
+		
+		<footer class="footer skin-dark-footer">
+			<div>
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-3 col-md-4">
+							<div class="footer-widget">
+																<div class="d-flex align-items-start flex-column mb-3">
+									<div class="d-inline-block">
+										<img src="http://localhost:8000/uploads/footerlogo_20240715120434.png" class="img-fluid" width="160" alt="Footer Logo">
+									</div>
+								</div>
+								<div class="footer-add pe-xl-3">
+									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia natus molestias, aspernatur animi ipsa, repudiandae officiis labore hic qui ut sapiente nesciunt dignissimos impedit? Corrupti deleniti rerum nostrum facere assumenda?</p>
+								</div>
+								<div class="foot-socials">
+									<ul>
+										<li><a href="JavaScript:Void(0);"><i class="fa-brands fa-facebook"></i></a></li>
+										<li><a href="JavaScript:Void(0);"><i class="fa-brands fa-linkedin"></i></a></li>
+										<li><a href="JavaScript:Void(0);"><i class="fa-brands fa-google-plus"></i></a></li>
+										<li><a href="JavaScript:Void(0);"><i class="fa-brands fa-twitter"></i></a></li>
+										<li><a href="JavaScript:Void(0);"><i class="fa-brands fa-dribbble"></i></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+												<div class="col-lg-3 col-md-4">
+							<div class="footer-widget">
+								<h4 class="widget-title">Services</h4>
+								<ul class="footer-menu">
+																			<li><a href="JavaScript:Void(0);">Dry Clean</a></li>
+																			<li><a href="JavaScript:Void(0);">Wash and Steam Iron</a></li>
+																			<li><a href="JavaScript:Void(0);">Wash and Fold</a></li>
+																			<li><a href="JavaScript:Void(0);">Shoe Cleaning</a></li>
+																			<li><a href="JavaScript:Void(0);">Steam Iron</a></li>
+																	</ul>
+							</div>
+						</div>
+
+						<div class="col-lg-3 col-md-4">
+							<div class="footer-widget">
+								<h4 class="widget-title">Link</h4>
+								<ul class="footer-menu">
+									<li><a href="JavaScript:Void(0);">Contact Us</a></li>
+									<li><a href="JavaScript:Void(0);">About Us</a></li>
+									<li><a href="JavaScript:Void(0);">Pricing</a></li>
+									<li><a href="JavaScript:Void(0);">Privacy Policy</a></li>
+									<li><a href="JavaScript:Void(0);">Terms of Use</a></li>
+								</ul>
+							</div>
+						</div>
+
+
+						<div class="col-lg-3 col-md-6">
+ 							<div class="footer-widget">
+								<h4 class="widget-title">Payment Methods</h4>
+								<div class="pmt-wrap">
+									<img src="./asset/img/payment.png" class="img-fluid" alt="">
+								</div>
+								<div class="our-prtwrap mt-4">
+									<div class="prtn-title">
+										<p class="text-light opacity-75 fw-medium">Our Partners</p>
+									</div>
+									<div class="prtn-thumbs d-flex align-items-center justify-content-start">
+										<div class="pmt-wrap pe-4">
+											<img src="./asset/img/mytrip.png" class="img-fluid" alt="">
+										</div>
+										<div class="pmt-wrap pe-4">
+											<img src="./asset/img/tripadv.png" class="img-fluid" alt="">
+										</div>
+										<div class="pmt-wrap pe-4">
+											<img src="./asset/img/goibibo.png" class="img-fluid" alt="">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="footer-bottom border-top">
+				<div class="container">
+					<div class="row align-items-center justify-content-between">
+
+						<div class="col-xl-6 col-lg-6 col-md-6">
+							<p class="mb-0">© 2024 GoWash Design by Prajwal I.</p>
+						</div>
+
+						<div class="col-xl-6 col-lg-6 col-md-6">
+							<ul
+								class="p-0 d-flex justify-content-start justify-content-md-end text-start text-md-end m-0">
+								<li><a href="#">Terms of services</a></li>
+								<li class="ms-3"><a href="#">Privacy Policies</a></li>
+								<li class="ms-3"><a href="#">Cookies</a></li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script src="./asset/js/addadult.js"></script>
+	<script src="./asset/js/jquery.min.js"></script>
+    <script src="./asset/js/popper.min.js"></script>
+    <script src="./asset/js/bootstrap.min.js"></script>
+    <script src="./asset/js/dropzone.min.js"></script>
+    <script src="./asset/js/flatpickr.js"></script>
+    <script src="./asset/js/flickity.pkgd.min.js"></script>
+    <script src="./asset/js/lightbox.min.js"></script>
+    <script src="./asset/js/rangeslider.js"></script>
+    <script src="./asset/js/select2.min.js"></script>
+    <script src="./asset/js/counterup.min.js"></script>
+    <script src="./asset/js/prism.js"></script>
+	<script src="./asset/js/custom.js"></script>
+
+</body>
+</html>
